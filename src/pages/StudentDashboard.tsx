@@ -35,11 +35,11 @@ const defaultStudentProfile = {
 };
 
 const mainExamSubjects = [
-  { name: 'Data Structures', marks: 88, total: 100, grade: 'A' },
-  { name: 'Operating Systems', marks: 82, total: 100, grade: 'A+' },
-  { name: 'Database Systems', marks: 90, total: 100, grade: 'A+' },
-  { name: 'Computer Networks', marks: 85, total: 100, grade: 'A' },
-  { name: 'Software Engineering', marks: 91, total: 100, grade: 'A' },
+  { name: 'Mathematics', marks: 88, total: 100, grade: 'A' },
+  { name: 'Science', marks: 82, total: 100, grade: 'A+' },
+  { name: 'English Literature', marks: 90, total: 100, grade: 'A+' },
+  { name: 'Social Science', marks: 85, total: 100, grade: 'A' },
+  { name: 'Computer Applications', marks: 91, total: 100, grade: 'A' },
 ];
 
 const classTestScores = [72, 78, 85, 68, 90, 82, 88, 75, 92, 86, 80, 95];
@@ -53,25 +53,25 @@ const performanceMetrics = [
 ];
 
 const timetableData = [
-  { time: '09:00 AM', mon: 'DS', tue: 'OS', wed: 'DBMS', thu: 'CN', fri: 'SE' },
-  { time: '10:00 AM', mon: 'OS', tue: 'COMP', wed: 'DS', thu: '--', fri: 'M-IV' },
-  { time: '11:30 AM', mon: 'DS', tue: 'DBMS', wed: 'ES', thu: '--', fri: '--' },
+  { time: '09:00 AM', mon: 'MATH', tue: 'SCI', wed: 'ENG', thu: 'SOC', fri: 'COMP' },
+  { time: '10:00 AM', mon: 'SCI', tue: 'COMP', wed: 'MATH', thu: '--', fri: 'ENG' },
+  { time: '11:30 AM', mon: 'MATH', tue: 'ENG', wed: 'SCI', thu: '--', fri: '--' },
   { time: '01:00 PM', mon: '--', tue: '--', wed: '--', thu: '--', fri: '--' },
   { time: '02:00 PM', mon: 'LAB', tue: 'LAB', wed: 'LAB', thu: 'LAB', fri: 'LAB' },
 ];
 
 const heatMapData = [
-  { subject: 'Data Structures', units: [95, 88, 76, 92, 89] },
-  { subject: 'Operating Systems', units: [82, 90, 78, 85, 91] },
-  { subject: 'Database Systems', units: [91, 85, 93, 88, 79] },
-  { subject: 'Computer Networks', units: [78, 72, 85, 90, 88] },
-  { subject: 'Software Engineering', units: [88, 91, 82, 79, 95] },
+  { subject: 'Mathematics', units: [95, 88, 76, 92, 89] },
+  { subject: 'Science', units: [82, 90, 78, 85, 91] },
+  { subject: 'English Literature', units: [91, 85, 93, 88, 79] },
+  { subject: 'Social Science', units: [78, 72, 85, 90, 88] },
+  { subject: 'Computer Applications', units: [88, 91, 82, 79, 95] },
 ];
 
 const announcements = [
-  { title: 'Mid Semester Exam Schedule', date: 'Nov 30, 2026', desc: 'Exams will be held from 15th Nov to 19th Nov. Please collect your admit cards.' },
-  { title: 'Project Submission Reminder', date: 'Nov 16, 2026', desc: 'Submit all software engineering prototypes by 16/11/No...' },
-  { title: 'Guest Lecture on AI/ML in Industry', date: 'Nov 12, 2026', desc: 'Join us on 12th Nov at 11:00 AM in Seminar Hall 2.' },
+  { title: 'Mid-Term Exam Schedule', date: 'Nov 30, 2026', desc: 'Exams will be held from 15th Nov to 19th Nov. Please check the notice board.' },
+  { title: 'Science Fair Project Submission', date: 'Nov 16, 2026', desc: 'Submit your science fair project models by 16/11/2026.' },
+  { title: 'Annual Sports Day Selection', date: 'Nov 12, 2026', desc: 'Selections for the Annual Sports Day will take place on the main ground.' },
 ];
 
 const feeInstallments = [
@@ -391,9 +391,9 @@ export default function Student() {
         }
       } else {
         const demoAnn = [
-          { id: 1, title: 'Mid Semester Exam Schedule', content: 'Exams will be held from 15th Nov to 19th Nov. Please collect your admit cards.', visibility: 'Students' },
-          { id: 2, title: 'Project Submission Reminder', content: 'Submit all software engineering prototypes by 16/11/2026.', visibility: 'Students' },
-          { id: 3, title: 'Guest Lecture on AI/ML in Industry', content: 'Join us on 12th Nov at 11:00 AM in Seminar Hall 2.', visibility: 'Students' }
+          { id: 1, title: 'Mid-Term Exam Schedule', content: 'Exams will be held from 15th Nov to 19th Nov. Please check the notice board for the timetable.', visibility: 'Students' },
+          { id: 2, title: 'Science Fair Project Submission', content: 'Submit your science fair project models by 16/11/2026.', visibility: 'Students' },
+          { id: 3, title: 'Annual Sports Day Selection', content: 'Selections for the Annual Sports Day will take place on the main ground at 11:00 AM.', visibility: 'Students' }
         ];
         setGlobalAnnouncements(demoAnn);
         setCurrentAnnouncementIndex(0);

@@ -33,9 +33,9 @@ export default function Navbar() {
       }
     } else {
       visibleToStudents = [
-        { id: 1, title: 'Mid Semester Exam Schedule', content: 'Exams will be held from 15th Nov to 19th Nov. Please collect your admit cards.', visibility: 'Students' },
-        { id: 2, title: 'Project Submission Reminder', content: 'Submit all software engineering prototypes by 16/11/2026.', visibility: 'Students' },
-        { id: 3, title: 'Guest Lecture on AI/ML in Industry', content: 'Join us on 12th Nov at 11:00 AM in Seminar Hall 2.', visibility: 'Students' }
+        { id: 1, title: 'Mid-Term Exam Schedule', content: 'Exams will be held from 15th Nov to 19th Nov. Please check the notice board for the timetable.', visibility: 'Students' },
+        { id: 2, title: 'Science Fair Project Submission', content: 'Submit your science fair project models by 16/11/2026.', visibility: 'Students' },
+        { id: 3, title: 'Annual Sports Day Selection', content: 'Selections for the Annual Sports Day will take place on the main ground at 11:00 AM.', visibility: 'Students' }
       ];
     }
     const dismissedIds = JSON.parse(localStorage.getItem('dismissed_announcements_student') || '[]');

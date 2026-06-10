@@ -18,9 +18,9 @@ const metricsData: PerformanceMetric[] = [
 ];
 
 const teacherComments = [
-  { prof: 'Grace Hopper', subject: 'Data Structures', comment: 'Exceptional problem-solving capabilities. Consistently leads group discussions.' },
-  { prof: 'Linus Torvalds', subject: 'Operating Systems', comment: 'Great execution of lab assignments. Needs minor focus on theoretical details.' },
-  { prof: 'Edgar Codd', subject: 'Database Systems', comment: 'Active participation in SQL design sessions. Project deliverables are highly organized.' },
+  { prof: 'Grace Hopper', subject: 'Mathematics', comment: 'Exceptional problem-solving capabilities. Consistently leads group discussions.' },
+  { prof: 'Linus Torvalds', subject: 'Science', comment: 'Great execution of lab assignments. Needs minor focus on theoretical details.' },
+  { prof: 'Edgar Codd', subject: 'English Literature', comment: 'Active participation in reading sessions. Project deliverables are highly organized.' },
 ];
 
 export default function PerformanceAnalysis() {
@@ -163,7 +163,7 @@ export default function PerformanceAnalysis() {
                 <div>
                   <h5 className="font-bold text-xs text-[#1B1F3B]">Practical Lab Projects</h5>
                   <p className="text-[10px] text-gray-400 leading-normal mt-0.5 font-semibold">
-                    Continue leading software engineering workshops to preserve the engagement rating.
+                    Continue leading science fair workshops to preserve the engagement rating.
                   </p>
                 </div>
               </div>
