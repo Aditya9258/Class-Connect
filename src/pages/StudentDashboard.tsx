@@ -27,11 +27,11 @@ const defaultStudentProfile = {
   rollNo: '2024CS101',
   studentId: 'STU-12345678',
   avatar: '/images/team-1.jpg',
-  course: 'B.Tech CS',
-  semester: 4,
-  cgpa: 8.7,
+  course: 'Class 10',
+  semester: 'A',
+  cgpa: 87.2,
   attendance: 92,
-  topSubjects: ['Interaction Design', 'Figma', 'User Research'],
+  topSubjects: ['Mathematics', 'Science', 'Computer Applications'],
 };
 
 const mainExamSubjects = [
@@ -692,9 +692,9 @@ export default function Student() {
               {/* Stats Row */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-5">
                 {[
-                  { label: 'Course', value: profile.course },
-                  { label: 'Semester', value: String(profile.semester) },
-                  { label: 'CGPA', value: String(profile.cgpa), color: 'text-[var(--crimson)]' },
+                  { label: 'Class', value: profile.course },
+                  { label: 'Section', value: String(profile.semester) },
+                  { label: 'Overall Percentage', value: `${profile.cgpa}%`, color: 'text-[var(--crimson)]' },
                   { label: 'Attendance', value: `${profile.attendance}%`, color: 'text-[var(--crimson)]' },
                 ].map((stat) => (
                   <div key={stat.label}>
