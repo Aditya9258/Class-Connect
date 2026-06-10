@@ -930,9 +930,9 @@ export default function Student() {
             <p className="text-[10px] uppercase tracking-wider text-[var(--text-muted)] mb-4">Student Percentile Rank</p>
             <div className="grid grid-cols-3 gap-4">
               {[
-                { label: 'Class Avg', rank: '84', suffix: 'th', color: 'from-blue-500/10 to-blue-500/5 border-blue-200', textColor: 'text-blue-600' },
-                { label: 'Year Fellowship', rank: '67', suffix: 'th', color: 'from-amber-500/10 to-amber-500/5 border-amber-200', textColor: 'text-amber-600' },
-                { label: 'Live Stream', rank: '95', suffix: 'th', color: 'from-emerald-500/10 to-emerald-500/5 border-emerald-200', textColor: 'text-emerald-600' },
+                { label: 'Class Percentile', rank: '84', suffix: 'th', color: 'from-blue-500/10 to-blue-500/5 border-blue-200', textColor: 'text-blue-600' },
+                { label: 'Grade Percentile', rank: '67', suffix: 'th', color: 'from-amber-500/10 to-amber-500/5 border-amber-200', textColor: 'text-amber-600' },
+                { label: 'School Percentile', rank: '95', suffix: 'th', color: 'from-emerald-500/10 to-emerald-500/5 border-emerald-200', textColor: 'text-emerald-600' },
               ].map((item) => (
                 <div
                   key={item.label}
