@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { Mail, Lock, ArrowRight, User, Briefcase } from 'lucide-react';
+import { API_BASE_URL } from '../services/api';
 
 export default function Login() {
   const [loginType, setLoginType] = useState<'student' | 'educator'>('student');
@@ -29,7 +30,7 @@ export default function Login() {
       // Backend Authentication for Educators
       if (loginType === 'educator') {
         try {
-          const response = await fetch('http://localhost:5000/api/auth/login', {
+          const response = await fetch(`${API_BASE_URL}/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password, role: 'educator' })
@@ -78,7 +79,7 @@ export default function Login() {
       // Backend Authentication for Students
       if (loginType === 'student') {
         try {
-          const response = await fetch('http://localhost:5000/api/auth/login', {
+          const response = await fetch(`${API_BASE_URL}/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password, role: 'student' })

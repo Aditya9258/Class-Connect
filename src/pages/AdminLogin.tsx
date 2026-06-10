@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Shield, Key, User, ArrowRight } from 'lucide-react';
 import { useAuth } from '../AuthContext';
+import { API_BASE_URL } from '../services/api';
 
 export default function AdminLogin() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function AdminLogin() {
     if (step === 2) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: username, password, role: 'super-admin' })
@@ -59,7 +60,7 @@ export default function AdminLogin() {
 
   const handleVerifyOTP = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/auth/otp/verify', {
+      const response = await fetch(`${API_BASE_URL}/auth/otp/verify`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

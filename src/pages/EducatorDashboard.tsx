@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 
 import { useAuth } from '../AuthContext';
-import api from '../services/api';
+import api, { API_BASE_URL } from '../services/api';
 
 export default function EducatorDashboard() {
   const [activeTab, setActiveTab] = useState(() => localStorage.getItem('educatorDashboardTab') || 'dashboard');
@@ -769,7 +769,7 @@ export default function EducatorDashboard() {
                     if (assignmentForm.file) {
                       fileUrl = `https://ik.imagekit.io/dummy/${assignmentForm.file.name}`;
                     }
-                    const res = await fetch('http://localhost:5000/api/educator/assignments', {
+                    const res = await fetch(`${API_BASE_URL}/educator/assignments`, {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({ ...assignmentForm, attachmentUrl: fileUrl, educatorId: '6662700f1234567890123456' })
@@ -927,7 +927,7 @@ export default function EducatorDashboard() {
                     }
 
                     const tokenStr = localStorage.getItem('educator_token');
-                    const res = await fetch('http://localhost:5000/api/educator/leaves', {
+                    const res = await fetch(`${API_BASE_URL}/educator/leaves`, {
                       method: 'POST',
                       headers: {
                         'Content-Type': 'application/json',
